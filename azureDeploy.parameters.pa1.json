@@ -1,0 +1,90 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "UKSouth"
+    },
+    "newStorageAccount": {
+      "value": "storuksfirewall"
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
+    },
+    "storageAccountNewOrExisting": {
+      "value": "existing"
+    },
+    "existingStorageAccountRG": {
+      "value": "rg-uks-firewall"
+    },
+    "dnsNameForPublicIP": {
+      "value": "verticaluksfw01"
+    },
+    "vmName": {
+      "value": "VSL-UKS-Firewall01"
+    },
+    "adminUserName": {
+      "value": "6dg-admin"
+    },
+    "adminPassword": {
+      "value": "~!_XZFBEuL:8r2fR"
+    },
+    "authenticationType": {
+      "value": "password"
+    },
+    "sshKey": {
+      "value": ""
+    },
+    "imageVersion": {
+      "value": "latest"
+    },
+    "imageSku": {
+      "value": "byol"
+    },
+    "vmSize": {
+      "value": "Standard_D3_v2"
+    },
+    "availabilitySetName": {
+      "value": "avs-uks-firewall"
+    },
+    "srcIPInboundNSG": {
+      "value": "10.100.7.96/28"
+    },
+    "baseUrl": {
+      "value": "https://raw.githubusercontent.com/PaloAltoNetworks/azure/master/vmseries-avset"
+    },
+    "virtualNetworkName": {
+      "value": "vnet-uks-10-100-7-0-24-hub"
+    },
+    "virtualNetworkAddressPrefix": {
+      "value": "10.100.7.0/24"
+    },
+    "subnet0Name": {
+      "value": "Management"
+    },
+    "subnet1Name": {
+      "value": "sn-uks-10-100-7-128-28-dmz-untrust"
+    },
+    "subnet2Name": {
+      "value": "sn-uks-10-100-7-112-28-dmz-trust"
+    },
+    "subnet0Prefix": {
+      "value": "10.100.7.96/28"
+    },
+    "subnet1Prefix": {
+      "value": "10.100.7.128/28"
+    },
+    "subnet2Prefix": {
+      "value": "10.100.7.112/28"
+    },
+    "subnet0StartAddress": {
+      "value": "10.100.7.100"
+    },
+    "subnet1StartAddress": {
+      "value": "10.100.7.132"
+    },
+    "subnet2StartAddress": {
+      "value": "10.100.7.116"
+    }
+  }
+}
